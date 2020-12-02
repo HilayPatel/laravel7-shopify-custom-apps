@@ -97,6 +97,10 @@ Build with PHP, Laravel 7, MySQL
     ```php
         https://some-app.com/authenticate
     ```
+- Order Webhook setting:
+    ```php
+        https://some-app.com/webhook/orders-create
+    ```
 
 # <h2> Reference / How it works
 ## <h3> Router
