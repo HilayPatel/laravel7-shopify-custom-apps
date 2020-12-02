@@ -92,6 +92,12 @@ Build with PHP, Laravel 7, MySQL
     ],
 // ...
     ```
+## <h3> Shopify Custom Apps Setup
+- Redirection URLs:
+    ```php
+        https://some-app.com/authenticate
+    ```
+
 # <h2> Reference / How it works
 ## <h3> Router
 - routes/web.php
