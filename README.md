@@ -90,7 +90,7 @@ Build with PHP, Laravel 7, MySQL
             'address' => 'https://some-app.com/webhook/orders-create'
         ],
     ],
-// ...
+    //...
     ```
 ## <h3> Shopify Custom Apps Setup
 - Redirection URLs:
