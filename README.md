@@ -98,6 +98,10 @@ Build with PHP, Laravel 7, MySQL
         https://some-app.com/authenticate
     ```
 - Order Webhook setting:
+    - Event: Order creation
+    - Format: JSON
+    - Webhook API version: 2020-10 (Latest)
+    - URL has to fix to <i>webhook/orders-create</i>, example:
     ```php
         https://some-app.com/webhook/orders-create
     ```
