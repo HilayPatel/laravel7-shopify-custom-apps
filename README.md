@@ -6,7 +6,7 @@ Build with PHP, Laravel 7, MySQL
 
 
 * List order/orders ONLY.
-![Alt text](public/images/github/order_list.png?raw=true "Order List")
+![Alt text](public/images/github/order_list1.png?raw=true "Order List")
 
 * Show individual order with Product, Items, and variants
 ![Alt text](public/images/github/single_order.png?raw=true "Single Order")
