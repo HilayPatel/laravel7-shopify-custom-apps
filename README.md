@@ -144,7 +144,12 @@ Build with PHP, Laravel 7, MySQL
     ```sh
         sudo service nginx reload
     ```
+## <h3> Shopify install app connection stopped at home page and not installing.
+- To fix this, make sure the database users table is empty or remove the installatio records for the same shop.
 
+## <h3> "Unknown Error" after delete the apps and reinstall. App success installed.
+- This issue still pending to find out.
+- However, the app was successfully installed.
 
 # <h2> Reference / How it works
 ## <h3> Router
