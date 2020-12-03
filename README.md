@@ -105,6 +105,46 @@ Build with PHP, Laravel 7, MySQL
     ```php
         https://some-app.com/webhook/orders-create
     ```
+# <h2> Common Errors & Fix
+## <h3> Shopify Refuse to connect (LINUX, PHP, NGINX)
+
+![Alt text](public/images/github/refuse_connect.png?raw=true "shopify refuse to connect")
+
+- The browser inspect shows "Refused to display ‘URL’ in a frame because it set ‘X-Frame-Options’ to ‘deny’"
+
+![Alt text](public/images/github/x-frame-deny.png?raw=true "x-frame deny")
+
+### <h4> How to fix this issue.
+1. Search Nginx Config for “X-Frame-Options”
+    ```sh
+    $ sudo grep -iRl "X-Frame-Options" /etc/nginx/
+    ```
+    - <h5> Output
+    ```sh
+        /etc/nginx/sites-available/shopify
+        /etc/nginx/snippets/ssl-params.conf
+    ```
+2. In the output file, search for line:
+    ```sh
+        add_header X-Frame-Options DENY;
+    ```
+3. Either change this to SAME-ORIGIN or just comment out the line with a # sign and Nginx will default to SAME-ORIGIN. Both methods should produce the same result.
+    ```sh
+        add_header X-Frame-Options SAME-ORIGIN;
+    ```
+    - or
+    ```sh
+        #add_header X-Frame-Options DENY;
+    ```
+4. Test Nginx config.
+    ```sh
+        sudo nginx -t
+    ```
+5. Reload NGINX for setting to take effect.
+    ```sh
+        sudo service nginx reload
+    ```
+
 
 # <h2> Reference / How it works
 ## <h3> Router

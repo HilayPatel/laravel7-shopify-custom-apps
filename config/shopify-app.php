@@ -146,7 +146,7 @@ return [
     |
     */
 
-    'api_key' => env('SHOPIFY_API_KEY', 'ebb9f37de9b1253506d18036208702ba'),
+    'api_key' => env('SHOPIFY_API_KEY', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -157,7 +157,7 @@ return [
     |
     */
 
-    'api_secret' => env('SHOPIFY_API_SECRET', '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'),
+    'api_secret' => env('SHOPIFY_API_SECRET', ''),
 
     /*
     |--------------------------------------------------------------------------
@@ -304,8 +304,12 @@ return [
     'webhooks' => [
             [
                 'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'orders/create'),
-                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://125d3dc2c1ac.ngrok.io/webhook/orders-create')
+                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://some-app.com/webhook/orders-create')
             ],
+            [
+                'topic' => env('SHOPIFY_WEBHOOK_1_TOPIC', 'app/uninstalled'),
+                'address' => env('SHOPIFY_WEBHOOK_1_ADDRESS', 'https://some-app.com/webhook/app-uninstalled')
+            ]
     ],
 
     /*
