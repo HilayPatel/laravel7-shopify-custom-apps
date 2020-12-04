@@ -40,7 +40,7 @@
 							<th><a href="{{ route('search_order_name', $record->id) }}"> {{ $record->order_name }}</th>
     						<th>{{ $record->created_at }}</th>
     						<th>{{ $record->email }}</th>
-    						<th>{{ $record->total_price }}</th>
+    						<th>S${{ number_format((float)$record->total_price, 2, '.', '') }}</th>
     						<th>{{ $record->financial_status }}</th>
     						<th>{{ $record->fulfillment_status ?: 'Unfulfilled' }}</th>
     						<th>{{ $record->item_count }}</th>

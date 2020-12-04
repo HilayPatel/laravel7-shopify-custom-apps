@@ -29,7 +29,7 @@ class ShopifyOrderController extends Controller
      */
     public function index()
     {
-        $records = ShopifyOrder::get();
+        $records = ShopifyOrder::orderBy('created_at', 'DESC')->get();
         
         if(!$records->isEmpty()){
             foreach($records as $key=>$record){
